@@ -39,7 +39,7 @@ Alternatively, you can set the `GEMINI_API_KEY` as an environment variable.
 ## Usage
 Run the Streamlit application:
 ```bash
-streamlit run OpenCVPaint.py  # Or the name of your main script
+streamlit run main.py  # Or the name of your main script
 ```
 Access the application: Open your web browser and navigate to the URL provided by Streamlit (usually http://localhost:8501).
 
@@ -49,17 +49,16 @@ Access the application: Open your web browser and navigate to the URL provided b
 
 ## Application Flow
 1. The application starts in the `IDLE` state.
-2. Click the **"Book Ticket"** button to start the process.
-3. The application transitions to the `SELECTING_START` state, displaying a list of metro stations.
-4. Select a starting station using a click gesture.
-5. The application transitions to the `SELECTING_END` state, displaying the list of metro stations again.
-6. Select a destination station.
-7. The application calculates the fare using the Gemini AI model and transitions to the `SHOW_FARE` state.
-8. Confirm the payment by clicking the **"Confirm Payment"** button.
-9. A ticket ID is generated, and the application transitions to the `PAYMENT_DONE` state.
+2. The application transitions to the `SELECTING_START` state, displaying a list of metro stations.
+3. Select a starting station using a click gesture.
+4. The application transitions to the `SELECTING_END` state, displaying the list of metro stations again.
+5. Select a destination station.
+6. The application calculates the fare using the Gemini AI model and transitions to the `SHOW_FARE` state.
+7. Confirm the payment by clicking the **"Confirm Payment"** button.
+8. A ticket is generated, and the application transitions to the `PAYMENT_DONE` state.
 
 ## Code Structure
-- **`OpenCVPaint.py`**: The main script containing the Streamlit application logic, gesture recognition, and AI integration.
+- **`main.py`**: The main script containing the Streamlit application logic, gesture recognition, and AI integration.
 - **`requirements.txt`**: A list of Python dependencies required to run the application.
 - **`README.md`**: This file, providing an overview of the project.
 - **`.streamlit/secrets.toml`** (Not in the repository): Stores sensitive information like the Gemini API key.
